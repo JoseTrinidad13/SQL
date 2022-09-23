@@ -1,0 +1,24 @@
+CREATE TABLE bikeshop (id INTEGER, item TEXT, price INTEGER, aisle INTEGER, quantity INTEGER, color TEXT);
+
+INSERT INTO bikeshop VALUES (1, "mountain bike", 500, 1, 10, "black");
+INSERT INTO bikeshop VALUES (2, "road bike", 500, 1, 12, "white");
+INSERT INTO bikeshop VALUES (3, "helmet", 50, 2, 20, "Blue");
+INSERT INTO bikeshop VALUES (4, "padds", 20, 2, 100, "black");
+INSERT INTO bikeshop VALUES (5, "shoes", 80, 3, 40, "purple");
+INSERT INTO bikeshop VALUES (6, "clips", 90, 4, 40, "gray");
+INSERT INTO bikeshop VALUES (7, "peddles", 50, 4, 50, "gray");
+INSERT INTO bikeshop VALUES (8, "handle bars", 70, 5, 49, "silver");
+INSERT INTO bikeshop VALUES (9, "seat", 50, 5, 46, "black");
+INSERT INTO bikeshop VALUES (10, "grips", 20, 6, 24, "pink");
+INSERT INTO bikeshop VALUES (11, "bell", 14, 6, 83, "green");
+INSERT INTO bikeshop VALUES (12, "energy bar", 4, 7, 72, "brown");
+INSERT INTO bikeshop VALUES (13, "Water bottle", 10, 7, 52, "clear");
+INSERT INTO bikeshop VALUES (14, "bottle cage", 25, 7, 36, "black");
+INSERT INTO bikeshop VALUES (15, "shorts", 30, 8, 83, "black");
+
+--displaing everyting in the shop by isle and
+getting the total price in each aisle.
+Select * from bikeshop ORDER BY aisle;
+Select aisle, SUM(price) from bikeshop group by aisle;
+
+--
